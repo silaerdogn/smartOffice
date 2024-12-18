@@ -4,10 +4,12 @@ from tabulate import tabulate
 
 def connect_db():
     return mysql.connector.connect(
-        host="database-1.cb8k2y8iy0eb.eu-central-1.rds.amazonaws.com",
-        user="admin",
-        password="raspberrypi",
-        database="office_management"
+   
+    'host': '....',
+    'user': '....',
+    'password': '....',
+    'database': '....'
+
     )
 
 def daily_report(date=None):
