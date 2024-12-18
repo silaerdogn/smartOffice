@@ -8,9 +8,9 @@ Projemizin temel amacı, ofis ortamının güvenliğini sağlamak, çalışanlar
 Sistemimiz, ofis içindeki farklı alanları ve işlevleri kapsamaktadır:
 
 # 1. Ana Giriş Kontrolü
-Ofise giriş yapmak için çalışanların bir tuş takımı kullanarak şifre girmesi gerekmektedir. Girilen şifre, Amazon RDS veritabanında doğrulanır. Şifre doğruysa, yeşil bir LED yanar ve LCD ekranda "Hoş geldiniz @isim" mesajı görüntülenir. Şifre yanlışsa, kırmızı bir LED görsel bir uyarı verir. Başarılı kimlik doğrulamasının ardından, devam takip sistemi otomatik olarak tetiklenir.
+Ofise giriş yapmak için çalışanların bir tuş takımı kullanarak şifre girmesi gerekmektedir. Girilen şifre, Amazon RDS veritabanında doğrulanır. Şifre doğruysa, yeşil bir LED yanar ve  ekranda "Hoş geldiniz @isim" mesajı görüntülenir.Başarılı kimlik doğrulamasının ardından, nesai takip sistemi otomatik olarak tetiklenir.
 
-Ana giriş kontrolü için kod, giris.py dosyasında bulunabilir. Tuş takımı girişini, veritabanı doğrulamasını ve LCD ekran yönetimini sağlar. db_operations.py dosyası, veritabanı bağlantısı ve işlemleri için gerekli fonksiyonları içerir.
+Ana giriş kontrolü için kod, giris.py dosyasında bulunabilir. Tuş takımı girişini, veritabanı doğrulamasını ve  ekran yönetimini sağlar. db_operations.py dosyası, veritabanı bağlantısı ve işlemleri için gerekli fonksiyonları içerir.
 
 # 2. Müdür Odası Kontrolü
 Müdür odasına erişim, yüz tanıma teknolojisi kullanılarak kontrol edilir. Veritabanında kayıtlı olan müdürün yüzü algılandığında, bir servo motor kapıyı açar. Bu, yalnızca yetkili kişilerin müdür odasına girebilmesini sağlar.
@@ -18,9 +18,9 @@ Müdür odasına erişim, yüz tanıma teknolojisi kullanılarak kontrol edilir.
 mudur_yonetimi.py dosyası, müdür odası kontrolü için kodu içerir. Yüz tanıma sistemini ve servo motor kontrolünü sağlar. Yüz tanıma modeli, manager_images dizininde saklanan görüntüler kullanılarak eğitilir.
 
 # 3. Ana Salon İzleme
-Ofis ortamındaki sıcaklık ve nem seviyeleri, bir sıcaklık/nem sensörü kullanılarak sürekli olarak izlenir. Ölçülen değerler, gerçek zamanlı olarak LCD ekranda görüntülenir ve çalışanlar için optimal çalışma koşullarının sağlanmasına yardımcı olur.
+Ofis ortamındaki sıcaklık ve nem seviyeleri, bir sıcaklık/nem sensörü kullanılarak sürekli olarak izlenir. Ölçülen değerler, gerçek zamanlı olarak  ekranda görüntülenir ve çalışanlar için optimal çalışma koşullarının sağlanmasına yardımcı olur. Ayrıca kullandığımız LDR sensörü ile de odamızın ışık durumunu, mq135 sensörümüz sayesinde de odamızın hava kalitesini ölçüyoruz.
 
-Ana salon izleme için kod, salon.py dosyasında bulunabilir. Sıcaklık/nem sensöründen verileri okur ve LCD ekranda görüntüler. dht11.py dosyası, DHT11 sensörüyle etkileşim kurmak için gerekli fonksiyonları sağlar.
+Ana salon izleme için kod, salon.py dosyasında bulunabilir. Sıcaklık/nem sensöründen verileri okur vekranda görüntüler,ldr ışığı ölçer ve mq135 ise hava kalitesini ölçer. dht11.py dosyası, DHT11 sensörüyle etkileşim kurmak için gerekli fonksiyonları sağlar.
 
 # 4. Mutfak Güvenliği
 Mutfaktaki olası gaz kaçaklarını tespit etmek için bir MQ2 gaz sensörü kullanılır. Tehlikeli bir gaz seviyesi algılandığında, bir buzzer kullanılarak sesli bir alarm tetiklenir. Bu erken uyarı sistemi, kazaları önlemeye ve ofisin güvenliğini sağlamaya yardımcı olur.
