@@ -15,10 +15,10 @@ BUZZER_PIN = 17     # Buzzer (PIN 11) - değiştirildi
 
 # Veritabanı bağlantı bilgileri
 DB_CONFIG = {
-    'host': 'database-1.cb8k2y8iy0eb.eu-central-1.rds.amazonaws.com',
-    'user': 'admin',
-    'password': 'raspberrypi',
-    'database': 'office_management'
+    'host': '....',
+    'user': '....',
+    'password': '....',
+    'database': '....'
 }
 
 # Pin ayarları
