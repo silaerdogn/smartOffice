@@ -5,10 +5,14 @@ class DatabaseManager:
     def __init__(self):
         try:
             self.connection = mysql.connector.connect(
-                host="database-1.cb8k2y8iy0eb.eu-central-1.rds.amazonaws.com",
-                user="admin",
-                password="raspberrypi",
-                database="office_management"
+          # Veritabanı bağlantı bilgileri
+DB_CONFIG = {
+    'host': '....',
+    'user': '....',
+    'password': '....',
+    'database': '....'
+}
+
             )
             self.cursor = self.connection.cursor()
             print("Veritabanı bağlantısı başarılı!")
