@@ -13,11 +13,12 @@ LED_PIN = 18        # Yeşil LED (PIN 12)
 
 # Veritabanı bağlantı bilgileri
 DB_CONFIG = {
-    'host': 'database-1.cb8k2y8iy0eb.eu-central-1.rds.amazonaws.com',
-    'user': 'admin',
-    'password': 'raspberrypi',
-    'database': 'office_management'
+    'host': '....',
+    'user': '....',
+    'password': '....',
+    'database': '....'
 }
+
 
 # Pin ayarları
 GPIO.setup(PIR_PIN, GPIO.IN)
