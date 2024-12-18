@@ -65,6 +65,29 @@ Bu bilgiler, ofis yönetimini optimize etmenize, kaynakları verimli bir şekild
 
 Web sitemizde ayrıca bir iletişim sayfası bulunmaktadır. Herhangi bir sorunuz, geri bildiriminiz veya desteğe ihtiyacınız olursa, akilliofisin.com/iletisim adresinden bize ulaşabilirsiniz. Ekibimiz size yardımcı olmaktan mutluluk duyacaktır.
 
+# OFİS RAPOR PYTHON DOSYAMIZ.
+ofisrapor.py dosyası, gelişmiş bir ofis yönetim sistemi için temel işlevleri içeren bir Python scriptidir. Bu script, ofis yöneticilerine ofisin anlık durumunu, toplantı odası kullanımını, personel giriş-çıkışlarını, gaz alarmlarını, geç gelenleri ve lavabo durumunu izlemelerine ve yönetmelerine olanak tanır.
+
+Script, MySQL veritabanına bağlanarak ilgili verileri alır ve işler. OfficeManager adlı bir sınıf tanımlanmıştır ve bu sınıf içinde çeşitli metodlar bulunmaktadır. Her metod, ofis yönetiminin belirli bir yönüyle ilgilenir.
+
+show_current_status() metodu, ofisin anlık durumunu gösterir. İçerideki personel sayısını ve müdürlerin durumunu (içeride veya dışarıda) veritabanından alır ve ekrana yazdırır.
+
+show_meeting_room_status() metodu, toplantı odasının durumunu gösterir. Son durum bilgisini ve son 5 hareket kaydını veritabanından alır ve ekrana yazdırır.
+
+show_today_entries() metodu, günlük giriş-çıkışları gösterir. Personelin giriş-çıkış zamanlarını ve durumlarını veritabanından alır ve bir tablo halinde ekrana yazdırır.
+
+show_gas_alarms() metodu, son 24 saat içindeki gaz alarmlarını gösterir. Alarm zamanlarını, durumlarını ve mesajlarını veritabanından alır ve bir tablo halinde ekrana yazdırır.
+
+show_late_arrivals() metodu, geç gelenleri gösterir. Belirlenen saatten sonra giriş yapan personeli veritabanından alır ve bir tablo halinde ekrana yazdırır.
+
+show_bathroom_status() metodu, lavabo durumunu gösterir. Son durum bilgisini ve son kontrol zamanını veritabanından alır ve ekrana yazdırır.
+
+update_bathroom_status() metodu, lavabo durumunu güncellemeye olanak tanır. Kullanıcıdan lavabo durumunu (temiz, kirli veya bakımda) seçmesini ister ve seçilen durumu veritabanına kaydeder.
+
+show_menu() metodu, kullanıcıya bir menü gösterir ve seçimine göre ilgili metodları çağırır. Kullanıcı, ofisin anlık durumunu, toplantı odası durumunu, günlük giriş-çıkışları, gaz alarmlarını, geç gelenleri, lavabo durumunu görüntüleyebilir, lavabo durumunu güncelleyebilir veya tüm raporları bir arada görüntüleyebilir.
+
+Script, veritabanı bağlantısını yönetir, verileri alır, işler ve sonuçları kullanıcıya anlaşılır bir şekilde sunar. Ofis yöneticilerine, ofisin işleyişini izlemek, sorunları tespit etmek ve gerekli aksiyonları almak için kullanışlı bir araç sağlar.
+
 # #  Sonuç
 "Akıllı Ofis Güvenlik ve İzleme Sistemi" projemiz, modern ofislerin ihtiyaçlarını karşılamak üzere tasarlanmış kapsamlı bir çözümdür. Güvenliği artırır, verimliliği yükseltir ve ofis yönetimini basitleştirir. Raspberry Pi, çeşitli sensörler, bulut hizmetleri ve özel olarak geliştirdiğimiz yazılımın gücünü birleştirerek, ofisleri akıllı ve bağlantılı alanlara dönüştürüyoruz.
 
