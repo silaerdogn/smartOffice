@@ -1,7 +1,7 @@
-# Smart Office Security and Monitoring System
+ # Smart Office Security and Monitoring System
 Hello there! We are a group of passionate engineers and developers who embarked on a journey to create an intelligent system that enhances the security and productivity of office spaces. That's how our "Smart Office Security and Monitoring System" project was born.
 
-# Project Overview
+ # Project Overview
 The primary goal of our project is to ensure the safety of the office environment, improve employee comfort, and provide real-time insights to managers about the office. To achieve this, we utilized a Raspberry Pi as the central control unit and integrated various sensors, database connectivity, and cloud services to create a comprehensive solution.
 
 # Project Components
